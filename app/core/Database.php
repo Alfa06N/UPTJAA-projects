@@ -1,8 +1,8 @@
 <?php
 class Database {
     private $host = 'localhost';
-    private $user = 'root';
-    private $pass = 'Cachapa1*';
+    private $user = ''; // Set your username here
+    private $pass = ''; // Set your password here
     private $dbname = "practice";
     private $connection;
     
