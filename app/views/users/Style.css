@@ -1,5 +1,11 @@
-/* Asegura que el contenedor principal ocupe toda la altura de la ventana */
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Home */
 .main-container {
     min-height: 100vh;
     position: relative; 
@@ -74,6 +80,112 @@
     .Link:hover, .Link:focus{
     color: black;
 }
+
+
+/* FORM */
+
+
+/* Estilos para la barra de navegación del formulario */
+.nav-form {
+    background-color: #45556C; 
+    padding: 15px 20px; 
+    height: 60px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.nav-link-home {
+    color: white; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    display: flex; 
+    align-items: center;
+    gap: 8px; 
+}
+
+.icono-home {
+    font-size: 1.5rem; 
+    color: white;
+}
+
+.nav-link-home:hover, .icono-home:hover, .nav-link-home:focus, .icono-home:focus {
+    color: #ADD8E6; 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 45px;
+}
+
+form {
+    max-width: 400px; /* Limita el ancho del formulario */
+    width: 100%; /* Asegura que el formulario ocupe el ancho disponible hasta el max-width */
+    margin-top: 30px; /* Espacio entre el título y el formulario */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para que se vea mejor */
+}
+
+/* Ajustes para los elementos del formulario para que se vean bien en columna */
+form label {
+    display: flex; /* Cada label en su propia línea */
+    margin-bottom: 5px; 
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%; 
+    padding: 10px;
+    background-color: #e2e8f0;
+    margin-bottom: 10px; 
+    border: none;
+
+    border-left: 1.5px solid #45556c;  
+    border-bottom: 1.5px solid #45556c;
+    
+    border-radius: 0;
+
+    
+    box-sizing: border-box;
+
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Para un efecto de focus suave */
+}
+
+form button[type="submit"] {
+    display: block;
+    width: 100%; 
+    padding: 10px;
+    background-color: #90A1B9; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #7a8aa3;
+}
+
+.form h1 {
+    text-align: center;
+    margin-bottom: 0; 
+}
+
+
+
+
 
 
 @media (max-width: 1600px) {

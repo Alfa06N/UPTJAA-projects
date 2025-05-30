@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <!-- Metadatos -->
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
         <div class="page_content col-12  col-md-6  d-flex flex-column justify-content-center align-items-center text-center ">
             <h1 class="title ">ListPersons</h1>
             <h2 class="subtitle">¡Crea tu lista de personas!</h2> 
-            <button type="button" class="btn btn-lg "> <a class="Link" href="#">Haz Click Aquí</a> </button> 
+            <button type="button" class="btn btn-lg "> <a class="Link" href="views/form/form.php">Haz Click Aquí</a> </button> 
         </div>
 
         <div class="vertical-wave-right  col-md-6 col-6 col-sm-6  d-none d-md-block">
