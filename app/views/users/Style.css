@@ -51,17 +51,18 @@
 .page_content .btn{
     margin-top: 20px;
     background-color: #90A1B9;
-    width: 120%;
+    width: 200px;
     padding: 7px 0;
 
     font-weight: 600;
     border: none;
     white-space: nowrap;
+
 }
 
 .page_content .btn:hover, .page_content .btn:focus{
     border: solid 2.5px #90A1B9;
-    transform: rotateX("360deg");
+    transform: rotateX(360deg);
     transition: 2s;
 }
 
@@ -74,22 +75,6 @@
     color: black;
 }
 
-/* Media query para móviles, si la onda no debe verse vertical en pantallas pequeñas */
-@media (max-width: 767.98px) {
-
-
-    .title{
-    font-size: 50px;
-}
-
-
-.subtitle{
-    font-size: 10px;
-    font-weight: 300;
-    white-space: nowrap;
-}
-}
-
 
 @media (max-width: 1600px) {
 
@@ -98,7 +83,6 @@
     font-size: 100px;
 }
 
-
 .subtitle{
     font-size: 30px;
     font-weight: 300;
@@ -106,16 +90,25 @@
 }
 }
 
-@media (max-width: 1201px) {
 
+@media (max-width: 775px) {
+
+    .page_content {
+    padding-left: 0; 
+    padding-right: 0%; 
+}
+
+    .vertical-wave-right {
+    display: none;
+    }
 
     .title{
-    font-size: 100px;
+    font-size: 80px;
 }
 
 
 .subtitle{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 300;
     white-space: nowrap;
 }
@@ -123,7 +116,7 @@
 .page_content .btn{
     margin-top: 10px;
     background-color: #90A1B9;
-    width: 100%;
+    width: 150px;
     padding: 3px 0;
 
     font-weight: 600;
