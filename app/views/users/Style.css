@@ -1,0 +1,136 @@
+/* Asegura que el contenedor principal ocupe toda la altura de la ventana */
+
+.main-container {
+    min-height: 100vh;
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* Estilos para el contenedor de la onda */
+.vertical-wave-right {
+
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+
+    position: absolute;
+    top: 0;
+    right: 0; /* Ubica la onda en el lado derecho del main-container */
+
+    z-index: 1;
+
+    height: 100%;
+    width: 20%;
+}
+
+
+.vertical-wave-right svg {
+    display: block; /* Elimina cualquier espacio extra por debajo del SVG */
+
+    width: 100%; 
+}
+
+
+/* TEXTO */
+.page_content {
+    padding-left: 30%;
+    padding-right: 10%; /* Un poco más que el ancho de la onda para margen */
+    min-height: 100vh;
+}
+
+.title{
+    font-size: 150px;
+}
+
+.subtitle{
+    font-size: 40px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.page_content .btn{
+    margin-top: 20px;
+    background-color: #90A1B9;
+    width: 120%;
+    padding: 7px 0;
+
+    font-weight: 600;
+    border: none;
+    white-space: nowrap;
+}
+
+.page_content .btn:hover, .page_content .btn:focus{
+    border: solid 2.5px #90A1B9;
+    transform: rotateX("360deg");
+    transition: 2s;
+}
+
+
+.Link{
+    text-decoration: none;
+    color: white;    
+}
+    .Link:hover, .Link:focus{
+    color: black;
+}
+
+/* Media query para móviles, si la onda no debe verse vertical en pantallas pequeñas */
+@media (max-width: 767.98px) {
+
+
+    .title{
+    font-size: 50px;
+}
+
+
+.subtitle{
+    font-size: 10px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+}
+
+
+@media (max-width: 1600px) {
+
+
+    .title{
+    font-size: 100px;
+}
+
+
+.subtitle{
+    font-size: 30px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+}
+
+@media (max-width: 1201px) {
+
+
+    .title{
+    font-size: 100px;
+}
+
+
+.subtitle{
+    font-size: 30px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.page_content .btn{
+    margin-top: 10px;
+    background-color: #90A1B9;
+    width: 100%;
+    padding: 3px 0;
+
+    font-weight: 600;
+    border: none;
+
+
+}
+
+
+}
