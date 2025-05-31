@@ -10,7 +10,7 @@
 
     <title>Registro de Usuario</title>
 
-    <link rel="stylesheet" href="../../Style.css">
+    <link rel="stylesheet" href="app/views/home/Style.css">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
@@ -20,15 +20,19 @@
 
     <nav class="nav-form">
         <div class="">
-            <a href="../../index.php" class="nav-link-home">
+            <a href="/UPTJAA-projects" class="nav-link-home">
                 <i class="bi bi-house-fill icono-home"></i> Home
             </a>
         </div>
     </nav>
 
+    <?php if (!empty($error)) : ?>
+        <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
+    <?php endif; ?>
+
     <section class="form">
     <h1>¡Rellena el formulario!</h1>
-    <form>
+    <form method="POST" action="/UPTJAA-projects/form">
         <div class="form-group"> <label for="nombre">Nombre de Usuario:
                 <i class="bi bi-info-circle-fill text-muted ms-2"
                    data-bs-toggle="popover"
@@ -36,7 +40,7 @@
                    data-bs-title="Requisitos de Nombre de Usuario"
                    data-bs-content="Debe tener entre 3 y 20 caracteres. Solo letras, números y guiones bajos."
                    data-bs-trigger="hover focus"></i> </label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre de usuario">
+            <input type="text" id="username" name="username" placeholder="Tu nombre de usuario">
         </div>
 
         <div class="form-group">
@@ -85,24 +89,15 @@
             </thead>
             <tbody>
                 <?php
-                // Aquí iría tu código PHP para obtener los usuarios de la base de datos
-                // Por ahora, usamos un array de ejemplo para demostrar cómo se muestra la tabla
-                $users = [
-                    ['id' => 1, 'username' => 'juanperez'],
-                    ['id' => 2, 'username' => 'mariag'],
-                    ['id' => 3, 'username' => 'carlos_l'],
-                    ['id' => 4, 'username' => 'anavaldez'],
-                    ['id' => 5, 'username' => 'pedro_soto']
-                ];
-
-                // Bucle para iterar sobre cada usuario y mostrarlo en una fila de la tabla
-                foreach ($users as $user) {
-                    echo '<tr>';
-                    echo '<th scope="row">' . htmlspecialchars($user['id']) . '</th>'; // ID como encabezado de fila
-                    echo '<td>' . htmlspecialchars($user['username']) . '</td>';
-                    // Si tuvieras más datos:
-                    // echo '<td>' . htmlspecialchars($user['email']) . '</td>';
-                    echo '</tr>';
+                if (!empty($users)) {
+                    foreach ($users as $user) {
+                        echo '<tr>';
+                        echo '<th scope="row">' . htmlspecialchars($user['id']) . '</th>';
+                        echo '<td>' . htmlspecialchars($user['username']) . '</td>';
+                        echo '</tr>';
+                    }
+                } else {
+                    echo '<tr><td colspan="2">No hay usuarios registrados.</td></tr>';
                 }
                 ?>
             </tbody>
@@ -117,6 +112,6 @@
     <div class="Autores">Creado por Oriana Celis, Nicolas Alfaro (2025) &#169;</div>
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <script src="../../../../../public/js/validacion.js"></script>
+    <script src="public/js/validacion.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 
     <title>Home</title>
 
-    <link rel="stylesheet" href="app/views/users/Style.css">
+    <link rel="stylesheet" href="app/views/home/Style.css">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
@@ -25,7 +25,7 @@
         <div class="page_content col-12  col-md-6  d-flex flex-column justify-content-center align-items-center text-center ">
             <h1 class="title ">ListPersons</h1>
             <h2 class="subtitle">¡Crea tu lista de personas!</h2> 
-            <button type="button" class="btn btn-lg "> <a class="Link" href="views/form/form.php">Haz Click Aquí</a> </button> 
+            <button type="button" class="btn btn-primary btn-lg "> <a class="Link" href="form">Haz Click Aquí</a> </button> 
         </div>
 
         <div class="vertical-wave-right  col-md-6 col-6 col-sm-6  d-none d-md-block">
