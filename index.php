@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-$db = new PDO('mysql:host=localhost;dbname=practice', 'root', 'Cachapa1*');
+$db = new PDO('mysql:host=localhost;dbname=practice', '', '');
 
 $url = isset($_GET['url']) ? trim($_GET['url'], '/') : '';
 
