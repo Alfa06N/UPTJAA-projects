@@ -82,10 +82,9 @@ body {
 }
 
 
+
 /* FORM */
 
-
-/* Estilos para la barra de navegación del formulario */
 .nav-form {
     background-color: #45556C; 
     padding: 15px 20px; 
@@ -131,12 +130,13 @@ form {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para que se vea mejor */
 }
 
-/* Ajustes para los elementos del formulario para que se vean bien en columna */
+
 form label {
-    display: flex; /* Cada label en su propia línea */
-    margin-bottom: 5px; 
+    display: flex; 
+    margin-bottom: 10px; 
     font-weight: bold;
     margin-left: 15px;
+    margin-top: 10px;
 }
 
 form input[type="text"],
@@ -144,7 +144,7 @@ form input[type="password"] {
     width: 100%; 
     padding: 10px;
     background-color: #e2e8f0;
-    margin-bottom: 10px; 
+    margin-bottom: 15px; 
     border: none;
 
     border-left: 1.5px solid #45556c;  
@@ -157,7 +157,7 @@ form input[type="password"] {
 
     font-size: 1rem;
     color: #333;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Para un efecto de focus suave */
+
 }
 
 form button[type="submit"] {
@@ -178,15 +178,77 @@ form button[type="submit"]:hover {
     background-color: #7a8aa3;
 }
 
+
+/* Estilos para los requisitos de contraseña */
+
+#password-requirements ul {
+    list-style: none; 
+    padding-left: 0; 
+    margin-top: 5px;
+}
+
+#password-requirements li {
+    color: #dc3545; 
+    align-items: center;
+}
+
+#password-requirements li.valid {
+    color: #28a745; /* requisitos cumplidos */
+}
+
+/* Opcional: Iconos para los requisitos */
+#password-requirements li::before {
+    content: "\F42A"; 
+    font-family: "bootstrap-icons"; 
+    margin-right: 8px;
+    font-size: 0.9em;
+    display: inline-block; 
+}
+
+#password-requirements li.valid::before {
+    content: "\F26A"; 
+}
+
 .form h1 {
     text-align: center;
     margin-bottom: 0; 
 }
 
 
+/* TABLA */
 
 
+.tabla-users {
+    background-color: #45556c; 
+    margin-top: 60px;
+    padding-top: 10px;   
+    padding-bottom: 30px; 
 
+}
+
+.tabla-users h2{
+    color: white;
+    margin-left: 15%;
+    margin-bottom: 35px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #45556c; 
+    color: white;
+    text-align: center;
+    padding: 20px 0; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+    
+}
+
+.Autores{
+    font-size: 1rem;
+}
 
 @media (max-width: 1600px) {
 
